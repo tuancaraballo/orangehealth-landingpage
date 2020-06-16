@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico?v=1.1"> 
     <title>Orange Health</title>
-    <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara:400,700|Mukta:500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://storage.googleapis.com/orangehealth-assets/landing-page/style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind+Vadodara:400,700|Mukta:500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://storage.googleapis.com/orangehealth-assets/landing-page/style.css"
+    />
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
+
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
             <div class="container">
                 <div class="site-header-inner">
-                    <div class="brand header-brand"> 
-                     <img src="https://storage.googleapis.com/orangehealth-assets/Logo0.png" style="width:250px; display:inline-block"/>       
+                    <div class="brand header-brand">
+                        <a href="/">
+                            <img src="https://storage.googleapis.com/orangehealth-assets/Logo6.png" style="width:250px; display:inline-block"/>  
+                        </a>
+                          
                     </div>
                     <a class="button button-primary" href="#">Login</a>
                 </div>
@@ -32,7 +43,13 @@
                             <p class="hero-paragraph is-revealing">
                                     Automate coverage, rooming assignments, scheduling, requests and gain insights into your clinic's performance. 
                                 </p>
-                            <p class="hero-cta is-revealing"><a class="button button-primary button-shadow" href="#">Sign up</a></p>
+                            <p class="hero-cta is-revealing" >
+                                    <form name="contact" method="POST" data-netlify="true" class="hero-cta is-revealing" style="display: flex; align-items: center;">
+                                        <input type="email" name="email" placeholder="enter email address..." style="height: 2.3rem;
+                                        width: 21rem; margin-right: 1rem;"/>
+                                        <button type="submit" class="button button-primary button-shadow" href="#">Request Demo</a>
+                                    </form>
+                            </p>
                         </div>
                         <div class="hero-illustration is-revealing">
                         <!-- <img src="./assets/computer-5.png" style="width:682px !important; display:inline-block"/>     -->
@@ -43,54 +60,97 @@
                 </div>
             </section>
 
-            <section class="features section text-center">
-                    
+            <section class="features section text-center">                  
+                    <div class="container" style="max-width: 1500px !important">
+                        <div class="features-inner section-inner" style="padding-top:30px !important">
+                            <h2 class="section-title mt-0 text-center">Why us</h2>
+                            <div class="features-wrap">
+                                
+                                <div class="feature is-revealing" style="max-width: 60%">
+                                    <p>
+                                            Healthcarte clinic operations have been plagued with inficient staffing deployment, poor room utilization and lack of visibility of day-to-day clinic operations that leads to uncaptured revenue and poor care coordination.
+                                           
+                                    </p>
+                                    <p>
+                                            OrangeHealth streamlines and optimizes these operations with digital processes so that healthcare staff can focus on the work that matters.
+                                    </p>
+                                   
+                                </div>
+
+                                </div>
+                                </div> 
+                                </div>
+            </section>
+    
+
+            <section class="features section text-center">                  
                 <div class="container" style="max-width: 1500px !important">
                     <div class="features-inner section-inner" style="padding-top:30px !important">
                         <h2 class="section-title mt-0 text-center">Features</h2>
                         <div class="features-wrap">
                             
                             <div class="feature is-revealing">
-                                <div class="feature-inner">
+                                <div class="feature-inner" style="height: auto;">
                                     <div class="feature-icon">
                                             <img src="./assets/calendar.png" style="width:3rem"/>
                                     </div>
                                     
-                                    <h4 class="feature-title h3-mobile">Optimized Scheduling</h4>
-                                    <p class="text-sm">Increase scheduling efficiency by creating templates that maximize employees' preferences and clinic room utilization.</p>
-                                    <p class="text-sm">Get real-time room utilization impact when changes are made to the schedule.</p>
+                                    <h4 class="feature-title h3-mobile" style="font-size: 1rem;">Optimized Scheduling</h4>
+                                    <div id="features-schedule" style="display:none">
+                                            <p class="text-sm">Automate coverage.</p>
+                                            <p class="text-sm">Increase scheduling efficiency by creating templates that maximize employees' preferences and clinic room utilization.</p>
+                                            <p class="text-sm">Get real-time room utilization impact when changes are made to the schedule.</p>
+                                    </div>
+                                    <button class="button button-sm" id="feature-scheduling-learn-more" onclick="onLearnMoreSchedule()">Learn more</button>
+                                 
+                                   
                                 </div>
                             </div>
                             <div class="feature is-revealing">
-                                <div class="feature-inner">
+                                <div class="feature-inner" style="height: auto;">
                                         <div class="feature-icon">
                                             <img src="./assets/business-plan.png" style="width:3rem"/>
                                         </div>
-                                    <h4 class="feature-title h3-mobile">Dynamic Clinic Board</h4>
-                                    <p class="text-sm">Autogenerate provider - allied health rooming assignments with one click. </p> 
-                                    <p class="text-sm">See providers who will lack allied health support.</p> 
-                                    <p class="text-sm">Automatically reflect unexpected changes in the schedule such as a sick call and provide alternate solutions.</p>
+                                    <h4 class="feature-title h3-mobile" style="font-size: 1rem;">Dynamic Clinic Board</h4>
+                                    <div id="features-dynamic-board" style="display:none">
+                                            <p class="text-sm">Autogenerate provider - allied health rooming assignments with one click. </p> 
+                                            <p class="text-sm">See providers who will lack allied health support.</p> 
+                                            <p class="text-sm">Automatically reflect unexpected changes in the schedule such as a sick call and provide alternate solutions.</p>
+                                    </div>
+                                   
+                                
+                                    <button class="button button-sm" id="feature-dynamic-board-learn-more" onclick="onLearnMoreDynamicBoard()">Learn more</button>
+                                    
                                 </div>
                             </div>
                             <div class="feature is-revealing">
-                                <div class="feature-inner">
+                                <div class="feature-inner" style="height: auto;">
                                         <div class="feature-icon">
                                                 <img src="./assets/layout.png" style="width:3rem"/>
                                             </div>
-                                    <h4 class="feature-title h3-mobile">Efficient Request Management</h4>
-                                    <p class="text-sm">Optimize request approval/rejection process through the auto-approval feature and through increased communication via an automated sms-and-email system. </p>
-                                    <p class="text-sm">Allow employees to submit requests via text-messages and ask our intelligent system questions like: "Can I take PTO next Thursday?"</p>
+                                    <h4 class="feature-title h6-mobile" style="font-size: 1rem;">Efficient Request Management</h4>
+                                    <div id="features-request-management" style="display:none">
+                                            <p class="text-sm">Optimize request approval/rejection process through the auto-approval feature and through increased communication via an automated sms-and-email system. </p>
+                                            <p class="text-sm">Allow employees to submit requests via text-messages and ask our intelligent system questions like: "Can I take PTO next Thursday?"</p>
+                                    </div>
+                                   
+                                
+                                    <button class="button button-sm" id="feature-request-management-learn-more" onclick="onLearnMoreRequestManagement()">Learn more</button>
                                 </div>
                             </div>
                             <div class="feature is-revealing">
-                                <div class="feature-inner">
+                                <div class="feature-inner" style="height: auto;">
                                         <div class="feature-icon">
                                                 <img src="./assets/newspaper.png" style="width:3rem"/>
                                             </div>
-                                    <h4 class="feature-title h3-mobile">Reports</h4>
+                                    <h4 class="feature-title h3-mobile" style="font-size: 1rem;">Reports</h4>
+                                    <div id="features-reports" style="display:none">
+
                                     <p class="text-sm">Learn patterns from employees' time to allow their tasks such as panel management time to be efficciently allocated. </p>
                                     <p class="text-sm">Track clinic room utilization performance.</p>
                                     <p class="text-sm">Gain insights into clinic's schedule such as when an extra hire will be needed.</p>
+                                            </div>
+                                    <button class="button button-sm" id="feature-reports-learn-more" onclick="onLearnMoreReports()">Learn more</button>
                                 </div>
                             </div>
                         </div>
@@ -98,160 +158,7 @@
                 </div>
             </section>
 
-            <section class="pricing section">
-                <div class="section-square"></div>
-                <div class="container">
-                    <div class="pricing-inner section-inner">
-                        <h2 class="section-title mt-0 text-center">Pricing</h2>
-                        <div class="pricing-tables-wrap">
-                            <div class="pricing-table">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header is-revealing">
-                                            <div class="pricing-table-title mt-12 mb-8">Monthly</div>
-                                            <div class="pricing-table-price mb-32 pb-24"><span class="pricing-table-price-currency h4">$</span><span class="pricing-table-price-amount h2">14.99</span>/mo</div>
-                                        </div>
-                                        <ul class="pricing-table-features list-reset text-xs mt-24 mb-56">
-                                            <li class="is-revealing">
-                                                <span class="list-icon">
-                                                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                    </svg>
-                                                </span>
-                                                <span>Optimized Scheduling</span>
-                                            </li>
-                                            <li class="is-revealing">
-                                                <span class="list-icon">
-                                                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                    </svg>
-                                                </span>
-                                                <span>Dynamic Clinic Board </span>
-                                            </li>
-                                            <li class="is-revealing">
-                                                <span class="list-icon">
-                                                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                    </svg>
-                                                </span>
-                                                <span>Efficient Request Management</span>
-                                            </li>
-                                            <li class="is-revealing">
-                                                <span class="list-icon">
-                                                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                    </svg>
-                                                </span>
-                                                <span>Reports</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta is-revealing">
-                                        <a class="button button-primary button-shadow button-block" href="#">Sign Up</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pricing-table">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header is-revealing">
-                                            <div class="pricing-table-title mt-12 mb-8">Yearly (MOST POPULAR)</div>
-                                            <div class="pricing-table-price mb-32 pb-24"><span class="pricing-table-price-currency h4">$</span><span class="pricing-table-price-amount h2">9.99</span>/mo</div>
-                                        </div>
-                                        <ul class="pricing-table-features list-reset text-xs mt-24 mb-56">
-                                                <li class="is-revealing">
-                                                        <span class="list-icon">
-                                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                            </svg>
-                                                        </span>
-                                                        <span>Optimized Scheduling</span>
-                                                    </li>
-                                                    <li class="is-revealing">
-                                                        <span class="list-icon">
-                                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                            </svg>
-                                                        </span>
-                                                        <span>Dynamic Clinic Board </span>
-                                                    </li>
-                                                    <li class="is-revealing">
-                                                        <span class="list-icon">
-                                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                            </svg>
-                                                        </span>
-                                                        <span>Efficient Request Management</span>
-                                                    </li>
-                                                    <li class="is-revealing">
-                                                        <span class="list-icon">
-                                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                            </svg>
-                                                        </span>
-                                                        <span>Reports</span>
-                                                    </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta is-revealing">
-                                        <a class="button button-primary button-shadow button-block" href="#">Sign Up</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pricing-table">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header is-revealing">
-                                            <div class="pricing-table-title mt-12 mb-8">Organization</div>
-                                            <div class="pricing-table-price mb-32 pb-24"><span class="pricing-table-price-amount h2"></span> <span class="pricing-table-price-currency h4">request demo</span></div>
-                                        </div>
-                                        <ul class="pricing-table-features list-reset text-xs mt-24 mb-56">
-                                                <li class="is-revealing">
-                                                        <span class="list-icon">
-                                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                            </svg>
-                                                        </span>
-                                                        <span>All the other features</span>
-                                                    </li>
-                                                    <li class="is-revealing">
-                                                            <span class="list-icon">
-                                                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                                </svg>
-                                                            </span>
-                                                            <span>Ability to Schedule Staff Across Multiple Clinics</span>
-                                                        </li>
-                            
-                                             
-                                                        <li class="is-revealing">
-                                                                <span class="list-icon">
-                                                                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                                    </svg>
-                                                                </span>
-                                                                <span>Organization Dashbord + Reports</span>
-                                                            </li>
-                                                       
-                                                                <li class="is-revealing">
-                                                                        <span class="list-icon">
-                                                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                                                <path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span>More...</span>
-                                                                    </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta is-revealing">
-                                        <a class="button button-primary button-shadow button-block" href="#">Request Demo</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
         </main>
 
         <footer class="site-footer text-light">
@@ -265,22 +172,22 @@
                     </div>
                     <ul class="footer-links list-reset">
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="/contactus.html">Contact</a>
                         </li>
                         <li>
                             <a href="#">About us</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">FAQ's</a>
                         </li>
                         <li>
                             <a href="#">Support</a>
-                        </li>
+                        </li> -->
                         <li>
-                                <a href="#">Privacy Policy</a>
+                                <a href="/privacy.html">Privacy Policy</a>
                             </li>
                             <li>
-                                    <a href="#">Terms of Service</a>
+                                    <a href="/termsofuse.html">Terms of Service</a>
                                 </li>
                     </ul>
                     <ul class="footer-social-links list-reset">
@@ -309,14 +216,64 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2018 OrangeHealth, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2020 OrangeHealth, all rights reserved.</div>
                 </div>
             </div>
         </footer>
     </div>
+    <script>
+            function onLearnMoreSchedule(){
+                var x = document.getElementById("features-schedule");
+                var action = document.getElementById("feature-scheduling-learn-more")
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    action.innerHTML = "Hide"
+                } else {
+                    x.style.display = "none";
+                    action.innerHTML = "Learn more"
+                }
+            }
 
+
+            function onLearnMoreDynamicBoard(){
+                var x = document.getElementById("features-dynamic-board");
+                var action = document.getElementById("feature-dynamic-board-learn-more")
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    action.innerHTML = "Hide"
+                } else {
+                    x.style.display = "none";
+                    action.innerHTML = "Learn more"
+                }
+            }
+
+            function onLearnMoreRequestManagement(){
+                var x = document.getElementById("features-request-management");
+                var action = document.getElementById("feature-request-management-learn-more")
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    action.innerHTML = "Hide"
+                } else {
+                    x.style.display = "none";
+                    action.innerHTML = "Learn more"
+                }
+            }
+
+            function onLearnMoreReports(){
+                var x = document.getElementById("features-reports");
+                var action = document.getElementById("feature-reports-learn-more")
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    action.innerHTML = "Hide"
+                } else {
+                    x.style.display = "none";
+                    action.innerHTML = "Learn more"
+                }
+            }
+            </script>
     <!-- <script src="dist/js/main.min.js"></script> -->
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="https://storage.googleapis.com/orangehealth-assets/landing-page/main.min.js"></script> 
+
 </body>
 </html>
