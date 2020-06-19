@@ -41,10 +41,7 @@
 						
 							<div style="text-align: center;">
 								<p>Questions? Feedback? Please fill the form below and we’ll be in touch with you.</p>
-									<form name="contactus" method="POST" data-netlify="true"  netlify-honeypot="bot-field"  style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-											<p class="hidden">
-													<label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-												  </p>
+									<form name="contactus" method="POST" data-netlify="true" data-netlify-recaptcha="true" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 										<div style="margin-bottom:1rem">
 												<label htmlFor="contactus-name" style="display:block; text-align: left;">Name</label>
 												<input id="contactus-name" type="text" name="name" style="height: 2.3rem;
@@ -64,7 +61,10 @@
 											<label htmlFor="contactus-message" style="display:block; text-align: left;">Message</label>
 											<textarea  id="contactus-message" name="message" rows="5"  style=" width: 21rem; "></textarea>	
 										</div>
-										<!-- <div data-netlify-recaptcha="true"></div> -->
+										<div style="width: 21rem; margin-bottom: 1rem;" >
+												<div data-netlify-recaptcha="true"></div>
+										</div>
+										
 											<button type="submit" class="button button-primary button-shadow" style="width: 21rem;" href="#">Get in touch</a>
 										</form>
 							</div>
